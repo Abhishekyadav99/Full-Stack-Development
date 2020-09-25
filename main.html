@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>A.P.J Kalam</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			position: relative;
+			box-sizing:border-box;
+			font-family:'poppins',sans-serif;
+		}
+		body{
+			background:#000;
+			min-height:200vh;
+		}
+		header{
+			position: fixed;
+			top: 0;
+			left:0;
+			color:black;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			transition: 0.6s;
+			padding: 40px 100px;
+			z-index: 100000;
+		}
+		header .logo{
+			position: relative;
+			font-weight: 700;
+			color:black;
+			text-decoration: none;
+			font-size: 2em;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			transition: 0.6s;
+		}
+		header ul{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		header ul li{
+			position: relative;
+			list-style: none;
+		}
+		header ul li a{
+			position: relative;
+			margin: 0 15px;
+			text-decoration: none;
+			color:black;
+			letter-spacing: 2px;
+			font-weight: 500px;
+			transition: 0.6s;
+		}
+		.f-d{
+			top:85%;
+			left:30%;
+						
+			position: relative;
+			margin: 0 15px;
+			text-decoration: none;
+			color:blue;
+			letter-spacing: 2px;
+			font-weight: 500px;
+			transition: 0.6s;
+		}
+		.f-d #p1{
+			background-color:orange;	
+			text-align: center;			
+		}
+		.f-d #p2{
+			background-color: white;
+			text-align: center;
+		}
+		.f-d #p3{
+			background-color:green;
+			text-align: center;
+		}
+
+
+		.ff-d{
+			top:0%;
+			left:0%;
+						
+			position: relative;
+			margin: 0 15px;
+			text-decoration: none;
+			color:blue;
+			letter-spacing: 2px;
+			font-weight: 500px;
+			transition: 0.6s;
+		}
+		.ff-d #p1{
+			background-color:orange;	
+			text-align: center;			
+		}
+		.ff-d #p2{
+			background-color: white;
+			text-align: center;
+		}
+		.ff-d #p3{
+			background-color:green;
+			text-align: center;
+		}
+
+		.banner{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			background: url("1.gif");
+			background-size: cover;
+		}
+		.about-a{
+			color:white;
+			left:0%;
+			line-height: 1.8;
+		}
+		.about-bg{
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			background-color:pink;
+			background-size: cover;
+		}
+		.profile-a{
+			position: relative;
+			width: 38%;
+			height: 34vh;
+			border-radius: 50%;
+			top: 10%;
+			left: 57%; 
+		}
+
+		/*Achivment*/
+
+		.about-achi{
+			left:0%;
+			line-height: 1.8;
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			color:white;
+			background-color:lightgreen;
+			background-size: cover;
+		}
+
+		.about-achi #pe1{
+			background-color:orange;
+		}
+		.about-achi #pe2{
+			background-color: white;
+		}
+		.about-achi #pe3{
+			background-color:green;
+		}
+
+		.gif-achi{
+			top:10%;
+			position: relative;
+			width: 10%;
+			height: 20vh;
+			border-radius: 80%;
+			top: 10%;
+			left: 67%; 
+		}
+
+		/*story*/
+		.topst{
+			background-color: pink;
+			height: 10%;
+			width:100%;
+		}
+		.sty{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #16384c;
+		}
+		.container{
+			position: relative;
+			display: flex;
+			width:1100px;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 30px;
+		}
+
+		.container .card{
+			position: relative;
+			max-width: 300px;
+			height: 215px;
+			background: #fff;
+			margin: 30px 10px;
+			padding: 20px 15px;
+			display: flex;
+			flex-direction:column;
+			box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+			transition: 0.3s ease-in-out;
+		}
+
+		.container .card:hover{
+			height: 420px;
+		}
+
+		.container .card .imgbx{
+			position: relative;
+			width: 260px;
+			height: 260px;
+			top: -60px;
+			left:20px;
+			z-index: 1;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+		}
+
+		.container .card .imgbx img{
+			max-width: 100%;
+			border-radius: 4px;
+		}
+		.container .card .content{
+			position: relative;
+			margin-top: -140px;
+			padding: 10px 15px;
+			text-align: center;
+			color:#111;
+			visibility: hidden;
+			opacity: 0;
+			transition: 0.3s ease-in-out;
+		}
+		.container .card:hover .content{
+			visibility: visible;
+			opacity: 1;
+			margin-top: -40px;
+			transition-delay: 0.3s;
+		}
+
+		/*button*/
+
+.a1{
+	position:relative;
+	display:inline-block;
+	padding:15px 30px;
+	color: #2196f3;
+	text-transform:uppercase;
+	letter-spacing:4px;
+	text-decoration:none;
+	font-size:24px;
+	overflow:hidden;
+	transition:0.2s;
+}
+
+.a1:hover{
+	color:#255784;
+	background:#2196f3;
+	box-shadow:0 0 10px #2196f3, 0 0 40px #2196f3,0 0 80px #2196f3;
+	transition-delay:1s;
+}
+
+.a1 span{
+	position:absolute;
+	display:block;
+}
+
+.a1 span:nth-child(1){
+	top:0;
+	left:-100%;
+	width:100%;
+	height:2px;
+	background:linear-gradient(90deg,transparent,#2196f3);
+}
+.a1:hover span:nth-child(1){
+	left:100%;
+	transition:1s;
+}
+
+
+
+.a1 span:nth-child(3){
+	bottom:0;
+	right:-100%;
+	width:100%;
+	height:2px;
+	background:linear-gradient(270deg,transparent,#2196f3);
+}
+
+.a1:hover span:nth-child(3){
+	right:100%;
+	transition:1s;
+	transition-delay:0.5s;
+}
+
+
+.a1 span:nth-child(2){
+	top:-100%;
+	right:0;
+	width:2px;
+	height:100%;
+	background:linear-gradient(100deg,transparent,#2196f3);
+}
+
+.a1:hover span:nth-child(2){
+	top:100%;
+	transition:1s;
+	transition-delay:0.25s;
+}
+
+
+
+.a1 span:nth-child(4){
+	bottom:-100%;
+	left:-0;
+	width:2px;
+	height:100%;
+	background:linear-gradient(360deg,transparent,#2196f3);
+}
+
+.a1:hover span:nth-child(4){
+	bottom:100%;
+	transition:1s;
+	transition-delay:0.75s;
+}
+
+	/*Galary*/
+	div.gallery {
+  	margin: 5px;
+  	border: 1px solid #ccc;
+  	float: left;
+  	width: 180px;
+	}
+
+	div.gallery:hover {
+  		border: 1px solid #777;
+  		width: 400px;
+  		height: 300px;
+		}
+
+	div.gallery img {
+  		width: 180px;
+  		height: 240px;
+		}
+		div.gallery img:hover {
+  		width: 100%;
+  		height: 100%;
+		}
+
+	div.desc {
+  		padding: 15px;
+  		text-align: center;
+		}
+	.gal-bg{
+		background-color:white;
+	}
+	</style>
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Kalam</a>
+		<ul>
+			<li><a href="#gal">Galary</a></li>
+			<li><a href="#st">Story</a></li>
+			<li><a href="#achi">Achivement</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</header>
+	<section class="banner" data-0-top="opacity:1;left:0px;" data-200-top="opacity:0;left:200px;">
+		<div class="f-d">
+			<p id="p1" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">Develope by</p>
+			<p id="p2" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">Abhishek</p>
+			<p id="p3" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">(Developer Point)</p>
+		</div>
+	</section>
+
+	<div id="about" class="about-a about-bg">
+			<div class="profile-a">
+				<img src="profile.jpg" alt="profile" class="profile-a">
+			</div>
+		
+			&emsp;&emsp;&emsp;<i class='far fa-address-card' style='font-size:24px'data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;"></i>&nbsp;<b style='font-size:24px; color:green;' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Avul Pakir Jainulabdeen Abdul Kalam</b><sub data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;"> 15 October 1931 – 27 July 2015</sub>
+			
+			<br>
+			&emsp;&emsp;&emsp;<i class='fas fa-laptop' style='font-size:24px' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;"></i>&nbsp;<b style='font-size:24px; color:green;' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:500px;">Indian aerospace scientist and politician </b>
+			<br>
+			&emsp;&emsp;&emsp;<i class='fas fa-hiking' style='font-size:24px' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:50px;"></i>&nbsp;<b style='font-size:24px; color:green;' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:50px;">11th President of India</b><sub data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:50px;"> from 2002 to 2007</sub>
+			<br>
+			&emsp;&emsp;&emsp;<i class="fa fa-map-marker" style="font-size:24px" data-center-center="opacity:1;left:-5;" data-0-bottom="opacity:0;left:50px;"></i>&nbsp;<b style='font-size:24px; color:green;' data-center-center="opacity:1;left:0;" data-0-bottom="opacity:0;left:50px;">He was born and raised in Rameswaram, Tamil Nadu</b>
+			<br>
+			&emsp;&emsp;&emsp;<i class="fas fa-sitemap" style="font-size:24px"></i>&nbsp;<b style='font-size:24px; color:green;'>studied physics and aerospace engineering.</b>
+			<br>
+			
+			<br><br>
+			&emsp;&emsp;
+			<b style=' color:black;' data-0-top="opacity:0;left:500px;" data-500-top="opacity:1;left:0px;">"Don’t take rest after your first victory because if you fail in second, more lips are waiting to say that your first victory was <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;just luck."</b>
+	</div>
+
+	<div id="achi" class="about-achi">
+		<br><br><br>
+		<p style="color:purple;" id="pe1" data-0-top="opacity:0;left:200px;" data-100-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>Top Juniour High School in Rameswaram.</p>
+
+		<p style="color:brown;" id="pe1" data-0-top="opacity:0;left:200px;" data-110-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>Get Scholarship MIT for Aerospace Engineering.</p>
+
+		<p style="color:purple;" id="pe1" data-0-top="opacity:0;left:200px;" data-120-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>Get Job in DRDO.</p>
+
+		<p style="color:brown;" id="pe2" data-0-top="opacity:0;left:200px;" data-130-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>Get offer in ISRO and work on successfull project SLV.</p>
+
+		<p style="color:purple;" id="pe2" data-0-top="opacity:0;left:200px;" data-140-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b> 11th President of India from 2002 to 2007, and after then show his 2020 vision to our country.</p>
+
+		<p style="color:brown;" id="pe2" data-0-top="opacity:0;left:200px;" data-150-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>He was one of the most distinguished scientists of India with the unique honour of receiving honorary doctorates from 30 universities and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;institutions.</p>
+
+		<p style="color:purple;"id="pe3" data-0-top="opacity:0;left:200px;" data-160-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:red;">&nbsp;*&nbsp;</b>awarded the coveted civilian awards - </p>
+
+		<p style="color:#FF8C00;"id="pe3" data-0-top="opacity:0;left:200px;" data-170-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:brown;">&nbsp;*&nbsp;</b>Padma Bhushan (1981) </p>
+
+		<p style="color:#B8860B;"id="pe3" data-0-top="opacity:0;left:200px;" data-180-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:brown;">&nbsp;*&nbsp;</b>Padma Vibhushan (1990)</p>
+
+		<p style="color:#FF8C00;" id="pe3" data-0-top="opacity:0;left:200px;" data-190-top="opacity:1;left:0px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color:brown;">&nbsp;*&nbsp;</b>the highest civilian award Bharat Ratna (1997)</p>
+
+			<img src="achi.gif" class="gif-achi">
+
+	</div>
+
+
+	<div id="st">
+		<div class="topst">
+			<br><br><br><br><br><br><br><br><br><br>
+		</div>
+		<div class="sty">
+			<div class="container" data-0-top="opacity:0;left:200px;" data-200-top="opacity:1;left:0px;">
+				<div class="card">
+					<div class="imgbx">
+						<img src="stc.webp">
+					</div>
+					<div class="content">
+						<h2>Childhood Story</h2>
+						<p>APJ Abdul Kalam was born into a poor Tamil Muslim family in the pilgrimage town of Rameswaram, Tamil Nadu, on October 15, 1931.</p>
+						<a href="#" class="a1"><span></span><span></span><span></span><span></span>Watch</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" data-0-top="opacity:0;left:300px;" data-150-top="opacity:1;left:0px;">
+				<div class="card">
+					<div class="imgbx">
+						<img src="sty.jpg">
+					</div>
+					<div class="content">
+						<h2>Teenage Story</h2>
+					
+						<p>Though, the family was not financially affluent yet all the children were raised in an atmosphere that was full of love and compassion.
+						</p>
+						<a href="#" class="a1"><span></span><span></span><span></span><span></span>Watch</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container" data-0-top="opacity:0;left:400px;" data-100-top="opacity:1;left:0px;">
+				<div class="card">
+					<div class="imgbx">
+						<img src="sto.jpeg">
+					</div>
+					<div class="content">
+						<h2>Full Life Story</h2>
+
+						<p>He was an average student during his school, but possessed a strong desire to learn and was very hard working.</p>
+						<a href="#" class="a1"><span></span><span></span><span></span><span></span>Watch</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+	<div id="gal" class="gal-bg">
+		<br><br><br><br>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-100-top="opacity:1;left:0px;">
+  			<a target="_blank" href="1.jpeg">
+    			<img src="1.jpeg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-104-top="opacity:1;left:0px;">
+  			<a target="_blank" href="2.jpg">
+    			<img src="2.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-107-top="opacity:1;left:0px;">
+  			<a target="_blank" href="3.jpg">
+    			<img src="3.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-110-top="opacity:1;left:0px;">
+  			<a target="_blank" href="4.png">
+    			<img src="4.png" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-113-top="opacity:1;left:0px;">
+  			<a target="_blank" href="5.jpg">
+    			<img src="5.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery">
+  			<a target="_blank" href="6.jpg">
+    			<img src="6.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-100-top="opacity:1;left:0px;">
+  			<a target="_blank" href="7.jpg">
+    			<img src="7.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-104-top="opacity:1;left:0px;">
+  			<a target="_blank" href="8.jpg">
+    			<img src="8.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-107-top="opacity:1;left:0px;">
+  			<a target="_blank" href="9.jpg">
+    			<img src="9.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-110-top="opacity:1;left:0px;">
+  			<a target="_blank" href="10.jpg">
+    			<img src="10.jpg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery" data-0-top="opacity:0;left:200px;" data-113-top="opacity:1;left:0px;">
+  			<a target="_blank" href="11.jpeg">
+    			<img src="11.jpeg" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<div class="gallery">
+  			<a target="_blank" href="achi.gif">
+    			<img src="achi.gif" alt="APJ Kalam">
+  			</a>
+  			<!--<div class="desc">Add a description of the image here</div>-->
+		</div>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+	<script src="scroll.js"></script>
+	<script type="text/javascript">
+		var s = skrollr.init();
+	</script>
+	<footer>
+		<div class="ff-d">
+			<p id="p1" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">.
+			</p>
+			<p id="p1" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
+				Develope by
+			</p>
+			<p id="p2" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
+				.
+			</p>
+			<p id="p2" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">Abhishek</p>
+			<p id="p3" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">
+				.
+			</p>
+			<p id="p3" data-0-top="opacity:0;left:100px;" data-200-top="opacity:1;left:0px;">(Developer Point)</p>
+		</div>
+	</footer>
+</body>
+</html>
